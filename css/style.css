@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --light-red-txt: hsl(356, 100%, 66%);
+  --light-red-bg: hsl(355, 100%, 74%);
+  --dark-blue-h: hsl(208, 49%, 24%);
+  --white-txt: hsl(0, 0%, 100%);
+  --gray-blue-footer-txt: hsl(240, 2%, 79%);
+  --dark-gray-blue-body: hsl(207, 13%, 34%);
+  --dark-black-blue-footer-bg: hsl(240, 10%, 16%);
+  --very-light-red: hsl(13, 100%, 72%);
+  --light-red: hsl(353, 100%, 62%);
+  --dark-gray-blue: hsl(237, 17%, 21%);
+  --dark-des-blue: hsl(237, 23%, 32%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Overpass, Ubuntu, "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+nav {
+  background-color: var(--light-red-bg);
+  border-bottom-left-radius: 4.5em;
+}
+nav .nav-bottom {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+nav .nav-bottom > div:last-child {
+  display: flex;
+}
+nav .nav-bottom > div:last-child .start-free, nav .nav-bottom > div:last-child .learn-more {
+  border: 1px solid var(--white-txt);
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+}
+
+.section-one {
+  max-width: 90%;
+  margin-left: auto;
+}
+.section-one h1 {
+  text-align: center;
+}
+
+.section-one > div {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.section-one > div .section-one-left {
+  max-width: 42%;
+}
+.section-one > div .illustration-editor {
+  background-image: url(../images/illustration-editor-desktop.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 890px;
+  height: 850px;
+}
+
+.section-two {
+  background-color: var(--dark-des-blue);
+  border-top-right-radius: 4.5em;
+  border-bottom-left-radius: 4.5em;
+  display: flex;
+  align-items: center;
+}
+
+.section-three {
+  max-width: 90%;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+}
+.section-three .illustration {
+  background-color: black;
+  background-image: url(../images/illustration-laptop-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 974px;
+  height: 786px;
+}
+
+footer {
+  background-color: var(--dark-black-blue-footer-bg);
+  border-top-right-radius: 4.5em;
+}
+footer .footer-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+}
+
+/*# sourceMappingURL=style.css.map */

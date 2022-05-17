@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --light-red-txt: hsl(356, 100%, 66%);
+  --light-red-bg: hsl(355, 100%, 74%);
+  --dark-blue-h: hsl(208, 49%, 24%);
+  --white-txt: hsl(0, 0%, 100%);
+  --gray-blue-footer-txt: hsl(240, 2%, 79%);
+  --dark-gray-blue-body: hsl(207, 13%, 34%);
+  --dark-black-blue-footer-bg: hsl(240, 10%, 16%);
+  --very-light-red: hsl(13, 100%, 72%);
+  --light-red: hsl(353, 100%, 62%);
+  --dark-gray-blue: hsl(237, 17%, 21%);
+  --dark-des-blue: hsl(237, 23%, 32%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=base.css.map */

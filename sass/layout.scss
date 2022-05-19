@@ -5,8 +5,178 @@ body {
 }
 
 nav {
-    background-color: var(--light-red-bg);
+    position: relative;
+    background: linear-gradient(50deg, var(--very-light-red), var(--light-red));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 80vh;
     border-bottom-left-radius: 4.5em;
+    color: var(--white-txt);
+    padding-top: 3rem;
+    opacity: .99;
+    overflow: hidden;
+
+    .nav-top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 80%;
+        margin: auto;
+
+        .signup {
+            padding: .5em 1.4em;
+            border: none;
+            outline: none;
+            background-color: var(--white-txt);
+            color: var(--light-red-txt);
+            border-radius: 1.2em;
+        }
+
+        .signup:hover {
+            background-color: var(--light-red-bg);
+            color: var(--white-txt);
+        }
+
+        .top-left {
+            cursor: pointer;
+            margin-right: 2em;
+        }
+    }
+
+    ul {
+        margin-left: 4em;
+        margin-top: 1em;
+        margin-right: auto;
+        list-style: none;
+        display: flex;
+        column-gap: 2em;
+
+        li {
+            cursor: pointer;
+            padding-bottom: 1em;
+            font-weight: 600;
+        }
+
+        .product {
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .product::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            right: 0;
+            background-image: url(../images/icon-arrow-light.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 10px;
+            height: 7px;
+            transition: all 200ms;
+        }
+
+        .product:hover {
+            li {
+                display: block;
+            }
+        }
+        .product:hover::after{
+            transform: rotate(-180deg);
+        }
+
+        .product:hover > ul{
+            height: 480%;
+        }
+
+        .company {
+            position: relative;
+            padding-right: 18px;
+        }
+
+        .company::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            right: 0;
+            background-image: url(../images/icon-arrow-light.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 10px;
+            height: 7px;
+            transition: all 200ms;
+        }
+        .company:hover{
+            li{
+                display: block;
+            }
+        }
+
+        .company:hover::after{
+            transform: rotate(-180deg);
+        }
+        .company:hover > ul{
+            height: 390%;
+        }
+
+        .connect {
+            position: relative;
+            padding-right: 17px;
+        }
+
+        .connect::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            right: 0;
+            background-image: url(../images/icon-arrow-light.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 10px;
+            height: 7px;
+            transition: all 200ms;
+        }
+        .connect:hover{
+            li{
+                display: block;
+            }
+        }
+
+        .connect:hover::after{
+            transform: rotate(-180deg);
+        }
+
+        .connect:hover > ul{
+            height: 320%;
+        }
+
+        ul {
+            background-color: var(--white-txt);
+            color: var(--dark-gray-blue-body);
+            padding: .8em 0 1em 0;
+            border-radius: 4px;
+            position: absolute;
+            top: 1em;
+            left: -4em;
+            height: 0;
+            display: flex;
+            flex-direction: column;
+            transition: height 100ms;
+
+            li {
+                display: none;
+                cursor: pointer;
+                padding: .6em 2em 0 1.2em;
+            }
+            li:hover{
+                color: var(--dark-gray-blue);
+            }
+        }
+    }
 
     .nav-bottom {
         display: flex;
@@ -15,22 +185,59 @@ nav {
         align-items: center;
     }
 
+    .nav-bottom>div:first-child {
+        margin-top: 2em;
+        font-size: 3em;
+    }
+
+    .nav-bottom>div:nth-of-type(2) {
+        margin-bottom: 2em;
+    }
+
     .nav-bottom>div:last-child {
         display: flex;
+        margin-bottom: 7em;
+        column-gap: 1em;
 
         .start-free,
         .learn-more {
             border: 1px solid var(--white-txt);
-            border-radius: 10px;
-            padding: .2rem .4rem;
+            padding: .5rem 1.4rem;
+            border-radius: 2em;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .start-free {
+            background-color: var(--white-txt);
+            color: var(--light-red-txt);
+        }
+
+        .start-free:hover {
+            background-color: var(--light-red-bg);
+            color: var(--white-txt);
+            border: none;
+            outline: none;
+        }
+
+        .learn-more:hover {
+            background-color: var(--white-txt);
+            color: var(--light-red-txt);
         }
     }
+}
+
+nav>svg {
+    position: absolute;
+    top: -200vh;
+    left: -40vw;
+    z-index: -1;
 }
 
 .section-one {
     max-width: 90%;
     margin-left: auto;
-    margin-top: 12rem;
+    margin-top: 9rem;
 
     h1 {
         font-size: 2em;
@@ -182,12 +389,13 @@ footer {
         justify-content: space-between;
         max-width: 80%;
 
-        h3{
+        h3 {
             color: var(--white-txt);
             margin-bottom: 1.4em;
         }
-        ul{
-            li{
+
+        ul {
+            li {
                 margin-bottom: 1em;
                 color: hsl(0, 0%, 60%);
                 cursor: pointer;

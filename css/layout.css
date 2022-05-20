@@ -11,12 +11,15 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   border-bottom-left-radius: 4.5em;
   color: var(--white-txt);
   padding-top: 3rem;
   opacity: 0.99;
   overflow: hidden;
+}
+nav .humburger {
+  display: none;
 }
 nav .nav-top {
   display: flex;
@@ -40,6 +43,7 @@ nav .nav-top .signup:hover {
 nav .nav-top .top-left {
   cursor: pointer;
   margin-right: 2em;
+  font-weight: 600;
 }
 nav ul {
   margin-left: 4em;
@@ -219,11 +223,21 @@ nav > svg {
   align-items: center;
   column-gap: 5rem;
 }
+@media screen and (max-width: 1166px) {
+  .section-one > div {
+    column-gap: 1em;
+  }
+}
 .section-one > div .section-one-left {
   max-width: 42%;
   display: flex;
   flex-direction: column;
   row-gap: 4em;
+}
+@media screen and (max-width: 1166px) {
+  .section-one > div .section-one-left {
+    max-width: 48%;
+  }
 }
 .section-one > div .section-one-left div h2 {
   color: var(--dark-blue-h);
@@ -253,6 +267,11 @@ nav > svg {
   left: 5rem;
   z-index: 5;
 }
+@media screen and (max-width: 1244px) {
+  .section-2 > svg {
+    left: 2em;
+  }
+}
 
 .section-two {
   position: relative;
@@ -262,13 +281,19 @@ nav > svg {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 60vh;
+  min-height: 60vh;
   margin-top: 4em;
   overflow: hidden;
 }
 .section-two div {
   max-width: 40%;
   margin-right: 8em;
+}
+@media screen and (max-width: 1244px) {
+  .section-two div {
+    max-width: 30%;
+    margin-right: 2em;
+  }
 }
 .section-two div h2 {
   font-size: 2em;
@@ -297,11 +322,10 @@ nav > svg {
 }
 
 .section-three {
-  margin-top: 2em;
+  margin-top: 8em;
   max-width: 90%;
   display: flex;
   align-items: center;
-  column-gap: 1em;
 }
 .section-three .illustration {
   background-image: url(../images/illustration-laptop-desktop.svg);
@@ -310,6 +334,12 @@ nav > svg {
   background-size: cover;
   width: 974px;
   height: 786px;
+}
+@media screen and (max-width: 1166px) {
+  .section-three .illustration {
+    width: 774px;
+    height: 586px;
+  }
 }
 .section-three .right {
   max-width: 50%;
@@ -351,6 +381,273 @@ footer .footer-container ul li {
   color: #999999;
   cursor: pointer;
   list-style: none;
+}
+
+@media screen and (max-width: 896px) {
+  nav {
+    position: relative;
+    background: linear-gradient(50deg, var(--very-light-red), var(--light-red));
+    background-position: center;
+    max-width: 100%;
+    padding-top: 3rem;
+  }
+  nav .humburger {
+    display: block;
+  }
+  nav .nav-top {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 80%;
+    margin: auto;
+  }
+  nav .nav-top .signup {
+    padding: 0.5em 1.4em;
+    border: none;
+    outline: none;
+    background-color: var(--white-txt);
+    color: var(--light-red-txt);
+    border-radius: 1.2em;
+  }
+  nav .nav-top .signup:hover {
+    background-color: var(--light-red-bg);
+    color: var(--white-txt);
+  }
+  nav .nav-top .top-left {
+    cursor: pointer;
+    margin-right: 2em;
+    font-weight: 600;
+  }
+  nav ul {
+    margin-left: 4em;
+    margin-top: 1em;
+    margin-right: auto;
+    list-style: none;
+    display: flex;
+    column-gap: 2em;
+  }
+  nav ul li {
+    cursor: pointer;
+    padding-bottom: 1em;
+    font-weight: 600;
+  }
+  nav ul .product {
+    position: relative;
+    padding-right: 20px;
+  }
+  nav ul .product::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background-image: url(../images/icon-arrow-light.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10px;
+    height: 7px;
+    transition: all 200ms;
+  }
+  nav ul .product:hover li {
+    display: block;
+  }
+  nav ul .product:hover::after {
+    transform: rotate(-180deg);
+  }
+  nav ul .product:hover > ul {
+    height: 480%;
+  }
+  nav ul .company {
+    position: relative;
+    padding-right: 18px;
+  }
+  nav ul .company::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background-image: url(../images/icon-arrow-light.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10px;
+    height: 7px;
+    transition: all 200ms;
+  }
+  nav ul .company:hover li {
+    display: block;
+  }
+  nav ul .company:hover::after {
+    transform: rotate(-180deg);
+  }
+  nav ul .company:hover > ul {
+    height: 390%;
+  }
+  nav ul .connect {
+    position: relative;
+    padding-right: 17px;
+  }
+  nav ul .connect::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background-image: url(../images/icon-arrow-light.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10px;
+    height: 7px;
+    transition: all 200ms;
+  }
+  nav ul .connect:hover li {
+    display: block;
+  }
+  nav ul .connect:hover::after {
+    transform: rotate(-180deg);
+  }
+  nav ul .connect:hover > ul {
+    height: 320%;
+  }
+  nav ul ul {
+    background-color: var(--white-txt);
+    color: var(--dark-gray-blue-body);
+    padding: 0.8em 0 1em 0;
+    border-radius: 4px;
+    position: absolute;
+    top: 1em;
+    left: -4em;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    transition: height 100ms;
+  }
+  nav ul ul li {
+    display: none;
+    cursor: pointer;
+    padding: 0.6em 2em 0 1.2em;
+  }
+  nav ul ul li:hover {
+    color: var(--dark-gray-blue);
+  }
+  nav .nav-bottom > div:first-child {
+    text-align: center;
+  }
+  nav .nav-bottom > div:nth-of-type(2) {
+    text-align: center;
+  }
+
+  nav > svg {
+    position: absolute;
+    top: -200vh;
+    left: -40vw;
+    z-index: -1;
+  }
+
+  .section-one {
+    margin: auto;
+    margin-top: 5rem;
+  }
+  .section-one h1 {
+    margin-bottom: 5rem;
+    margin-right: 0em;
+  }
+
+  .section-one > div {
+    flex-direction: column-reverse;
+  }
+  .section-one > div .section-one-left {
+    max-width: 90%;
+    row-gap: 2em;
+  }
+  .section-one > div .section-one-left div h2 {
+    text-align: center;
+  }
+  .section-one > div .section-one-left div p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .section-one > div .section-one-left div:last-child {
+    margin-top: 0em;
+  }
+  .section-one > div .illustration-editor {
+    background-image: url(../images/illustration-editor-mobile.svg);
+    background-position: center;
+    max-width: 406px;
+    height: 331px;
+  }
+
+  .section-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-2 > svg {
+    position: relative;
+    top: 5rem;
+    left: 0rem;
+  }
+
+  .section-two {
+    align-items: center;
+    justify-content: center;
+    margin-top: -15em;
+  }
+  .section-two div {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20rem;
+    z-index: 9;
+  }
+  .section-two div h2 {
+    text-align: center;
+  }
+  .section-two div p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-two::after {
+    top: -40rem;
+    left: -6.5rem;
+    background-image: url(../images/bg-pattern-circles.svg);
+  }
+
+  .section-three {
+    margin: auto;
+    margin-top: 4em;
+    flex-direction: column;
+  }
+  .section-three .illustration {
+    background-image: url(../images/illustration-laptop-mobile.svg);
+    background-position: center;
+    width: 498px;
+    height: 359px;
+  }
+  .section-three .right {
+    max-width: 90%;
+    text-align: center;
+  }
+  .section-three .right p {
+    font-size: 18px;
+  }
+
+  footer .footer-container {
+    text-align: center;
+    padding-right: 0em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+  }
+  footer .footer-container h3 {
+    margin-top: 3em;
+    margin-bottom: 1.6em;
+  }
+  footer .footer-container ul li {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=layout.css.map */

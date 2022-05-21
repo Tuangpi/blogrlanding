@@ -429,151 +429,126 @@ footer {
 @media screen and (max-width: 896px) {
     nav {
         position: relative;
-        background: linear-gradient(50deg, var(--very-light-red), var(--light-red));
         background-position: center;
-        max-width: 100%;
-        padding-top: 3rem;
 
         .humburger{
             display: block;
         }
     
         .nav-top {
-            display: none;
-            align-items: center;
-            justify-content: flex-end;
-            max-width: 80%;
-            margin: auto;
+            justify-content: space-between;
+            max-width: 90%;
+            position: relative;
+
+            // .signup {
+            //     padding: .5em 1.4em;
+            //     border: none;
+            //     outline: none;
+            //     background-color: var(--white-txt);
+            //     color: var(--light-red-txt);
+            //     border-radius: 1.2em;
+            // }
     
-            .signup {
-                padding: .5em 1.4em;
-                border: none;
-                outline: none;
-                background-color: var(--white-txt);
-                color: var(--light-red-txt);
-                border-radius: 1.2em;
-            }
-    
-            .signup:hover {
-                background-color: var(--light-red-bg);
-                color: var(--white-txt);
-            }
+            // .signup:hover {
+            //     background-color: var(--light-red-bg);
+            //     color: var(--white-txt);
+            // }
     
             .top-left {
-                cursor: pointer;
-                margin-right: 2em;
-                font-weight: 600;
+                display: none;
+                // cursor: pointer;
+                // margin-right: 2em;
+                // font-weight: 600;
             }
         }
     
-        ul {
-            margin-left: 4em;
-            margin-top: 1em;
-            margin-right: auto;
-            list-style: none;
+        .nav-top>ul {
+            margin: auto;
+            position: absolute;
+            top: 3em;
+            left: 0;
+            text-align: center;
+            border-radius: 5px;
+            width: 100%;
+            height: auto;
             display: flex;
-            column-gap: 2em;
+            flex-direction: column;
+            background-color: var(--white-txt);
+            color: var(--dark-blue-h);
+            row-gap: 0.2em;
     
-            li {
-                cursor: pointer;
-                padding-bottom: 1em;
-                font-weight: 600;
-            }
-    
-            .product {
-                position: relative;
-                padding-right: 20px;
+            // li {
+            //     margin: auto;
+            //     ul{
+            //         margin-left: 2em;
+            //         background-color: rebeccapurple;
+            //         li{
+            //             background-color: white;
+            //         }
+            //     }
+            // }
+
+            .product{
+                margin-top: 2em;
+                ul{
+                    width: 80%;
+                }
             }
     
             .product::after {
-                content: '';
-                position: absolute;
-                top: 6px;
-                right: 0;
-                background-image: url(../images/icon-arrow-light.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 10px;
-                height: 7px;
-                transition: all 200ms;
+                background-image: url(../images/icon-arrow-dark.svg);
             }
     
-            .product:hover {
-                li {
-                    display: block;
-                }
-            }
-            .product:hover::after{
-                transform: rotate(-180deg);
-            }
+        //     .product:hover {
+        //         li {
+        //             display: block;
+        //         }
+        //     }
+        //     .product:hover::after{
+        //         transform: rotate(-180deg);
+        //     }
     
-            .product:hover > ul{
-                height: 480%;
+        //     .product:hover > ul{
+        //         height: 480%;
+        //     }
+        .company{
+            ul{
+                margin-left: 3em;
             }
-    
-            .company {
-                position: relative;
-                padding-right: 18px;
-            }
+        }
     
             .company::after {
-                content: '';
-                position: absolute;
-                top: 6px;
-                right: 0;
-                background-image: url(../images/icon-arrow-light.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 10px;
-                height: 7px;
-                transition: all 200ms;
+                background-image: url(../images/icon-arrow-dark.svg);
             }
-            .company:hover{
-                li{
-                    display: block;
-                }
-            }
+        //     .company:hover{
+        //         li{
+        //             display: block;
+        //         }
+        //     }
     
-            .company:hover::after{
-                transform: rotate(-180deg);
-            }
-            .company:hover > ul{
-                height: 390%;
-            }
-    
-            .connect {
-                position: relative;
-                padding-right: 17px;
-            }
+        //     .company:hover::after{
+        //         transform: rotate(-180deg);
+        //     }
+        //     .company:hover > ul{
+        //         height: 390%;
+        //     }
     
             .connect::after {
-                content: '';
-                position: absolute;
-                top: 6px;
-                right: 0;
-                background-image: url(../images/icon-arrow-light.svg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 10px;
-                height: 7px;
-                transition: all 200ms;
+                background-image: url(../images/icon-arrow-dark.svg);
             }
-            .connect:hover{
-                li{
-                    display: block;
-                }
-            }
+        //     .connect:hover{
+        //         li{
+        //             display: block;
+        //         }
+        //     }
     
-            .connect:hover::after{
-                transform: rotate(-180deg);
-            }
+        //     .connect:hover::after{
+        //         transform: rotate(-180deg);
+        //     }
     
-            .connect:hover > ul{
-                height: 320%;
-            }
+        //     .connect:hover > ul{
+        //         height: 320%;
+        //     }
     
             ul {
                 background-color: var(--white-txt);
@@ -589,7 +564,7 @@ footer {
                 transition: height 100ms;
     
                 li {
-                    display: none;
+                    background-color: green;
                     cursor: pointer;
                     padding: .6em 2em 0 1.2em;
                 }
@@ -598,13 +573,13 @@ footer {
                 }
             }
         }    
-        .nav-bottom>div:first-child {
-            text-align: center;
-        }
+        // .nav-bottom>div:first-child {
+        //     text-align: center;
+        // }
     
-        .nav-bottom>div:nth-of-type(2) {
-            text-align: center;
-        }
+        // .nav-bottom>div:nth-of-type(2) {
+        //     text-align: center;
+        // }
     }
     
     nav>svg {

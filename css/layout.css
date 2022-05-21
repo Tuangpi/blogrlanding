@@ -386,130 +386,53 @@ footer .footer-container ul li {
 @media screen and (max-width: 896px) {
   nav {
     position: relative;
-    background: linear-gradient(50deg, var(--very-light-red), var(--light-red));
     background-position: center;
-    max-width: 100%;
-    padding-top: 3rem;
   }
   nav .humburger {
     display: block;
   }
   nav .nav-top {
-    display: none;
-    align-items: center;
-    justify-content: flex-end;
-    max-width: 80%;
-    margin: auto;
-  }
-  nav .nav-top .signup {
-    padding: 0.5em 1.4em;
-    border: none;
-    outline: none;
-    background-color: var(--white-txt);
-    color: var(--light-red-txt);
-    border-radius: 1.2em;
-  }
-  nav .nav-top .signup:hover {
-    background-color: var(--light-red-bg);
-    color: var(--white-txt);
+    justify-content: space-between;
+    max-width: 90%;
+    position: relative;
   }
   nav .nav-top .top-left {
-    cursor: pointer;
-    margin-right: 2em;
-    font-weight: 600;
+    display: none;
   }
-  nav ul {
-    margin-left: 4em;
-    margin-top: 1em;
-    margin-right: auto;
-    list-style: none;
+  nav .nav-top > ul {
+    margin: auto;
+    position: absolute;
+    top: 3em;
+    left: 0;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
     display: flex;
-    column-gap: 2em;
+    flex-direction: column;
+    background-color: var(--white-txt);
+    color: var(--dark-blue-h);
+    row-gap: 0.2em;
   }
-  nav ul li {
-    cursor: pointer;
-    padding-bottom: 1em;
-    font-weight: 600;
+  nav .nav-top > ul .product {
+    margin-top: 2em;
   }
-  nav ul .product {
-    position: relative;
-    padding-right: 20px;
+  nav .nav-top > ul .product ul {
+    width: 80%;
   }
-  nav ul .product::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    right: 0;
-    background-image: url(../images/icon-arrow-light.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 10px;
-    height: 7px;
-    transition: all 200ms;
+  nav .nav-top > ul .product::after {
+    background-image: url(../images/icon-arrow-dark.svg);
   }
-  nav ul .product:hover li {
-    display: block;
+  nav .nav-top > ul .company ul {
+    margin-left: 3em;
   }
-  nav ul .product:hover::after {
-    transform: rotate(-180deg);
+  nav .nav-top > ul .company::after {
+    background-image: url(../images/icon-arrow-dark.svg);
   }
-  nav ul .product:hover > ul {
-    height: 480%;
+  nav .nav-top > ul .connect::after {
+    background-image: url(../images/icon-arrow-dark.svg);
   }
-  nav ul .company {
-    position: relative;
-    padding-right: 18px;
-  }
-  nav ul .company::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    right: 0;
-    background-image: url(../images/icon-arrow-light.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 10px;
-    height: 7px;
-    transition: all 200ms;
-  }
-  nav ul .company:hover li {
-    display: block;
-  }
-  nav ul .company:hover::after {
-    transform: rotate(-180deg);
-  }
-  nav ul .company:hover > ul {
-    height: 390%;
-  }
-  nav ul .connect {
-    position: relative;
-    padding-right: 17px;
-  }
-  nav ul .connect::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    right: 0;
-    background-image: url(../images/icon-arrow-light.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 10px;
-    height: 7px;
-    transition: all 200ms;
-  }
-  nav ul .connect:hover li {
-    display: block;
-  }
-  nav ul .connect:hover::after {
-    transform: rotate(-180deg);
-  }
-  nav ul .connect:hover > ul {
-    height: 320%;
-  }
-  nav ul ul {
+  nav .nav-top > ul ul {
     background-color: var(--white-txt);
     color: var(--dark-gray-blue-body);
     padding: 0.8em 0 1em 0;
@@ -522,19 +445,13 @@ footer .footer-container ul li {
     flex-direction: column;
     transition: height 100ms;
   }
-  nav ul ul li {
-    display: none;
+  nav .nav-top > ul ul li {
+    background-color: green;
     cursor: pointer;
     padding: 0.6em 2em 0 1.2em;
   }
-  nav ul ul li:hover {
+  nav .nav-top > ul ul li:hover {
     color: var(--dark-gray-blue);
-  }
-  nav .nav-bottom > div:first-child {
-    text-align: center;
-  }
-  nav .nav-bottom > div:nth-of-type(2) {
-    text-align: center;
   }
 
   nav > svg {
